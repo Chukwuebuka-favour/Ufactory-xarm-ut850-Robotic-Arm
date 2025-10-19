@@ -63,6 +63,8 @@ The snippet is as follows
 
 ```
 
+After performing instruction 6, run instruction 5 again from you workspace dirctory **uf850_ws**. So as to build and add the line sbove to the build
+
 ### 7. Lauch the package in RViz2
 Run the command in your terminal, with the current directory the workspace created **uf850_ws**
 ```bash
