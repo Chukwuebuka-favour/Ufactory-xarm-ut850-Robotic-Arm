@@ -27,11 +27,11 @@ To do this first create a folder name **uf850_ws** in your desired directory, th
     ros2 pkg create --build-type ament-cmake uf850_description
 ```
 
-**uf850** - ROS2 Workspace
+**uf850** - ROS2 Workspace /n
 **uf850_description** - ROS2 package
 
 ### 4. Clone the respository
-Inside the package folder **ut850_description, run the command in the terminal
+Inside the package folder **ut850_description**, run the command in the terminal
 ```bash
     git clone git@github.com:Chukwuebuka-favour/Ufactory-xarm-uf850-Robotic-Arm.git
 ```
@@ -48,7 +48,7 @@ Then source the setup file
 ```
 
 ### 6. Format the CMakeLists.txt
-After you ran the cmd for creating you workspace and package a file **CMakeLists.txt** was added to yor package. You need to add the following snippet just between **endif()** and **ament_package()**to ensure you don't run into any issue while lauching the package.
+After you ran the cmd for creating you workspace and package a file **CMakeLists.txt** was added to yor package. You need to add the following snippet just between **endif()** and **ament_package()** to ensure you don't run into any issue while lauching the package.
 
 The snippet is as follows
 
