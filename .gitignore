@@ -2,3 +2,10 @@ CMakeLists.txt
 package.xml
 include/
 src/
+meshes/link_base.stlZone.Identifier
+meshes/link1.stlZone.Identifier
+meshes/link2.stlZone.Identifier
+meshes/link3.stlZone.Identifier
+meshes/link4.stlZone.Identifier
+meshes/link5.stlZone.Identifier
+meshes/link6.stlZone.Identifier
