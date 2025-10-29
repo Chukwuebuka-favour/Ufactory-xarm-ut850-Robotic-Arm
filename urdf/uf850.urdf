@@ -13,108 +13,120 @@
 
     <link name="link1">
         <visual>
-            <origin xyz="0.0 0.0 0.362" rpy="0.0 0.0 0.0"/>
+            
             <geometry>
                 <mesh filename="package://uf850_description/meshes/link1.stl" scale="1 1 1"/>
             </geometry>
-            <material name="base_color">
+            <!-- <material name="base_color">
                 <color rgba="0. 0.6 0.6 1"/>
-            </material>
+            </material> -->
         </visual>
     </link>
 
-    <joint name="base_link_to_link1" type="fixed">
+    <joint name="base_link_to_link1" type="revolute">
+        <origin xyz="0.0 0.0 0.362" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
         <child link="link1"/>
+        <axis xyz="0 0.0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="0.0" velocity="0.0"/>
     </joint>
 
     <link name="link2">
         <visual>
-            <!-- <origin xyz="0.0 0.0 0.4" rpy="0.0 0.0 0.0"/> -->
+            <origin xyz="0.0 0.0 -0.053" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://uf850_description/meshes/link2.stl" scale="1 1 1"/>
+                <mesh filename="package://uf850_description/meshes/link2.stl" scale="1 1 1"/> 
             </geometry>
-            <material name="base_color">
-                <color rgba="0. 0.6 0.6 1"/>
+            <material name="link1_color">
+                <color rgba="0.0 0.0 1.0 1"/>
             </material>
         </visual>
     </link>
 
-    <joint name="link1_to_link2" type="fixed">
-        <origin xyz="0.0 0.0 0.36" rpy="1.6 4.69 0.0"/>
+    <joint name="link1_to_link2" type="revolute">
+        <origin xyz="0.0 -0.051 0.0" rpy="1.57 -1.57 0"/>
         <parent link="link1"/>
         <child link="link2"/>
+        <axis xyz="0 0.0 1"/>
+        <limit lower="0" upper="1.57" effort="0.0" velocity="0.0"/>
     </joint>
 
     <link name="link3">
         <visual>
-            <!-- <origin xyz="0.0 0.0 0.4" rpy="0.0 0.0 0.0"/> -->
+            <origin xyz="0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://uf850_description/meshes/link3.stl" scale="1 1 1"/>
             </geometry>
-            <material name="base_color">
-                <color rgba="0. 0.6 0.6 1"/>
+            <material name="link3_color">
+                    <color rgba="0.0 1.0 0.0 1"/>
             </material>
         </visual>
     </link>
 
-    <joint name="base-link_to_link3" type="fixed">
-        <origin xyz="-0.01 0.0 0.75" rpy="-1.576 0.0 0.0"/>
-        <parent link="base_link"/>
+    <joint name="link2_to_link3" type="revolute">
+        <origin xyz="0.39 0.0 -0.053" rpy="3.14 0.0 -1.57"/>
+        <parent link="link2"/>
         <child link="link3"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="0.0" velocity="0.0"/>
     </joint>
 
     <link name="link4">
         <visual>
-            <origin xyz="0.145 0.0 0.33" rpy="0.0 3.13 0.0"/>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://uf850_description/meshes/link4.stl" scale="1 1 1"/>
             </geometry>
-            <material name="base_color">
-                <color rgba="0. 0.6 0.6 1"/>
+            <material name="link4_color">
+                    <color rgba="1 0.0 0.0 1"/>
             </material>
         </visual>
     </link>
 
-    <joint name="base_link_to_link4" type="fixed">
-        <!-- <origin xyz="-0.01 0.0 0.75" rpy="-1.576 0.0 0.0"/> -->
-        <parent link="base_link"/>
+    <joint name="link3_to_link4" type="revolute">
+        <origin xyz="0.15 0.4 0" rpy="-1.57 0 0"/>
+        <parent link="link3"/>
         <child link="link4"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="0" upper="3.14" effort="0.0" velocity="0.0"/>
     </joint>
+    
 
     <link name="link5">
         <visual>
-            <origin xyz="0.155 -0.01 0.33" rpy="1.51 0.0 3.1"/>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://uf850_description/meshes/link5.stl" scale="1 1 1"/>
             </geometry>
-            <material name="base_color">
-                <color rgba="0. 0.6 0.6 1"/>
+            <material name="link5_color">
+                    <color rgba="1 0 1 1"/>
             </material>
         </visual>
     </link>
 
-    <joint name="base_link_to_link5" type="fixed">
-        <!-- <origin xyz="-0.01 0.0 0.75" rpy="-1.576 0.0 0.0"/> -->
-        <parent link="base_link"/>
+    <joint name="link4_to_link5" type="revolute">
+        <origin xyz="0.0 0.0 0.0" rpy="-1.57 0 0"/>
+        <parent link="link4"/>
         <child link="link5"/>
+        <axis xyz="0.0 0.0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="0.0" velocity="0.0"/>
     </joint>
 
     <link name="link6">
         <visual>
-            <origin xyz="0.155 -0.01 0.245" rpy="3.15 0 0"/>
+            <origin xyz="0 0 0.09" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <mesh filename="package://uf850_description/meshes/link6.stl" scale="1 1 1"/>
             </geometry>
-            <material name="base_color">
-                <color rgba="0. 0.6 0.6 1"/>
+            <material name="link5_color">
+                    <color rgba="1 0 1 1"/>
             </material>
         </visual>
     </link>
 
-    <joint name="base_link_to_link6" type="fixed">
-        <!-- <origin xyz="-0.01 0.0 0.75" rpy="-1.576 0.0 0.0"/> -->
-        <parent link="base_link"/>
+    <joint name="link5_to_link6" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="1.57 0 0"/>
+        <parent link="link5"/>
         <child link="link6"/>
     </joint>
 
